@@ -1,4 +1,10 @@
 .venv/
 data/
 notebooks/.ipynb_checkpoints
-
+ml_project/__pycache__/
+ml_project/src/__pycache__/
+ml_project/tests/__pycache__/
+__pycache__/
+ml_project/models/
+ml_project/logs/
+check.py

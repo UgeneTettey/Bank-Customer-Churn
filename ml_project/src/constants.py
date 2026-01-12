@@ -1,10 +1,10 @@
-RAW_DATA_DIR = "data/raw"
+RAW_DATA_DIR = "data/"
 PROCESSED_DATA_DIR = "data/processed"
 MODELS_DIR = "models"
 REPORTS_DIR = "reports"
 
-DATA_FILENAME = "your_file.csv"
-TARGET_COL = "churn"
+DATA_FILENAME = "customers.csv"
+TARGET_COL = "Exited"
 
 TEST_SIZE = 0.2
 RANDOM_STATE = 42
