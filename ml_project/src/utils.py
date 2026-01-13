@@ -12,7 +12,7 @@ def setup_logger(log_dir='logs', log_file = "app.log"):
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler(os.path.join(log_dir, log_file)),
-            logging.StreamHandler()
+            logging.FileHandler(os.path.join(log_dir, log_file)),  # saves logs to a file
+            logging.StreamHandler() # prints to console
         ]
     )

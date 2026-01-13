@@ -28,5 +28,5 @@ def validate_data(df: pd.DataFrame):
     if missing:
         logger.error(f"Missing columns: {missing}")
         raise ValueError(f"Missing columns: {missing}")
-    logger.info("All required columns are present.")
+    logger.info("All required columns are present. Validation passed.")
 

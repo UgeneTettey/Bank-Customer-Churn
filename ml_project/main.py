@@ -16,22 +16,17 @@ def main():
 
     # 1. Load data
     df = load_data()
-    logger.info(f"Data loaded successfully with shape {df.shape}")
+    
 
     # 2. Validate data
-    logger.info("Starting data validation")
     validate_data(df)
-    logger.info("Data validation passed")
 
     # 3. Transform data
-    logger.info("Starting data transformation")
     df = transform_data(df)
-    logger.info("Data transformation completed")
-    # print(df[TARGET_COL].dtype)  # Ensure target column is integer type
+
 
     # 4. Train model
     model, accuracy, classif_report = train_model(df)
-    logger.info("Model training completed")
 
     print("\nPipeline completed successfully")
     print(f"Model accuracy: {accuracy:.4f}")

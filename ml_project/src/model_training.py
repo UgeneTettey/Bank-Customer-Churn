@@ -17,6 +17,7 @@ def train_model(df, save_model=True, models_dir="models"):
     Returns:
         model, accuracy, confusion_matrix
     """
+    logger.info("Starting model training...")
 
     # define features and target
     X = df.drop(columns=[TARGET_COL])
