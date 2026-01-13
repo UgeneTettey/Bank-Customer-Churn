@@ -7,7 +7,7 @@ from sklearn.pipeline import Pipeline
 import joblib
 import os
 import logging
-from src.constants import TARGET_COL
+from src.constants import TARGET_COL, IRRELEVANT_COLS
 from src.data_transformation import build_preprocessor
 
 logger = logging.getLogger(__name__)
@@ -21,6 +21,9 @@ def train_model(df, save_model=True, models_dir="models"):
     """
     logger.info("Starting model training...")
 
+    # drop irrelevant columns
+    df = df.drop(columns=IRRELEVANT_COLS)
+
     # define features and target
     X = df.drop(columns=[TARGET_COL])
     y = df[TARGET_COL]
@@ -31,7 +34,7 @@ def train_model(df, save_model=True, models_dir="models"):
     )
 
     # data preprocessing
-    preprocessor = build_preprocessor(df)
+    preprocessor = build_preprocessor(X)
     pipeline = Pipeline(steps=[
         ('preprocessor', preprocessor),
         ('model', LogisticRegression(random_state=42, max_iter=1000))

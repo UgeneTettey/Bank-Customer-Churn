@@ -8,3 +8,18 @@ TARGET_COL = "Exited"
 
 TEST_SIZE = 0.2
 RANDOM_STATE = 42
+
+FEATURE_COLUMNS = [
+    "CreditScore",
+    "Geography",
+    "Gender",
+    "Age",
+    "Tenure",
+    "Balance",
+    "NumOfProducts",
+    "HasCrCard",
+    "IsActiveMember",
+    "EstimatedSalary"
+]
+
+IRRELEVANT_COLS = ["RowNumber", "CustomerId", "Surname"]
